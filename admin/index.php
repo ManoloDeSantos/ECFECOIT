@@ -57,7 +57,4 @@ if($_POST){
           </div>
         </div>
 
-      </div>
-    </div>
-  </body>
-</html>
+<?php include("template/footer.php")?>  
