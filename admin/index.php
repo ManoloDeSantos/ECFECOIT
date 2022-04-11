@@ -25,12 +25,7 @@ if($_POST){
             </div>
             <div class="card-body">
 
-              <form method="post">
-              <div class = "form-group">
-              <label>Email address</label>
-              <input type="email" class="form-control" name="email" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
+              <form method="POST">
 
               <div class = "form-group">
               <label>Utilisateur</label>
@@ -43,10 +38,6 @@ if($_POST){
               <input type="password" class="form-control" placeholder="Password">
               </div>
 
-              <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">rappeler mot de passe</label>
-              </div>
               <br/>
               <button type="submit" class="btn btn-primary">Entrer dans l’administrateur</button>
               </form>
@@ -57,4 +48,4 @@ if($_POST){
           </div>
         </div>
 
-<?php include("template/footer.php")?>  
+<?php include("template/footer.php");?>  
