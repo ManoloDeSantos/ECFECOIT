@@ -1,11 +1,12 @@
-<?php include("../template/header.php"); ?>
+<?php include("../template/header.php");?>
 <?php
 print_r($_POST);
+print_r($_FILES);
 ?>
 <div class="col-md-5">
   <div class="card">
     <div class="card-header">      
-      Différentes formations
+      Données de la formation
     </div>
     <div class="card-body">
       <form method="POST" enctype="multipart/form-data">
@@ -26,9 +27,9 @@ print_r($_POST);
         </div>
 
         <div class="btn-group" role="group" aria-label="">
-          <button type="button" name="action" value="Ajouter" class="btn btn-success">Ajouter</button>
-          <button type="button" name="action" value="Modifier" class="btn btn-warning">Modifier</button>
-          <button type="button" name="action" value="Annuler" class="btn btn-info">Annuler</button>
+          <button type="submit" name="action" value="Ajouter" class="btn btn-success">Ajouter</button>
+          <button type="submit" name="action" value="Modifier" class="btn btn-warning">Modifier</button>
+          <button type="submit" name="action" value="Annuler" class="btn btn-info">Annuler</button>
         </div>
 
       </form>
@@ -55,4 +56,4 @@ print_r($_POST);
     </tbody>
   </table>
 </div>
-<?php include("../template/footer.php"); ?>  
+<?php include("../template/footer.php");?>  
