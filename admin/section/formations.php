@@ -6,30 +6,16 @@ $txtNom=(isset($_POST['txtNom']))?$_POST['txtNom']:"";
 $txtImage=(isset($_FILES['txtImage']['name']))?$_FILES['txtImage']['name']:"";
 $action=(isset($_POST['action']))?$_POST['action']:"";
 
-echo $txtID. "<br/>";
-echo $txtNom. "<br/>";
-echo $txtImage. "<br/>";
-echo $action. "<br/>";
-
-$host="localhost";
-$bd="ecfecoit";
-$user="root";
-$password="";
-
-try {
-  $connexion=new PDO("mysql:host=$host;dbname=$bd",$user,$password);
-  if($connexion){ echo "connecté au système";}
-} catch ( Exception $ex) {
-  echo $ex->getMessage();
-  
-}
+include("../config/bd.php");
 
 switch($action){
 
         case "Ajouter":
-          //
-           $sentenceSQL= $connexion->prepare("INSERT INTO `formations` (`id`, `nom`, `image`) VALUES (NULL, 'HTML', 'image.jpg');");
-           $sentenceSQL->execute();
+          
+          $sentenceSQL= $connexion->prepare("INSERT INTO formations (nom,image ) VALUES (:nom,:image);");
+          $sentenceSQL->bindParam(':nom',$txtNom);
+          $sentenceSQL->bindParam(':image',$txtImage);          
+          $sentenceSQL->execute();
           echo "Appuyé sur le bouton Ajouter";
           break;
         case "Modifier":
