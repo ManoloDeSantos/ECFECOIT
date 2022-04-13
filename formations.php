@@ -9,7 +9,7 @@
  
 
 <div class="card" style="width: 18rem;">
-  <img src="./img/libros1-612x612.jpg" class="card-img-top" alt="Image formation">
+  <img src="./img/l1.jpg" class="card-img-top" alt="Image formation">
   <div class="card-body">
     <h3 class="card-title">HTML & CSS</h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="./img/libros1-612x612.jpg" class="card-img-top" alt="Image formation">
+  <img src="./img/l2.jpg" class="card-img-top" alt="Image formation">
   <div class="card-body">
     <h3 class="card-title">Javascript</h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -43,7 +43,7 @@
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="./img/libros1-612x612.jpg" class="card-img-top" alt="Image formation">
+  <img src="./img/l3.jpg" class="card-img-top" alt="Image formation">
   <div class="card-body">
     <h3 class="card-title">Web Responsive</h3>
  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -66,7 +66,7 @@
 
 
 <div class="card" style="width: 18rem;">
-  <img src="./img/libros1-612x612.jpg" class="card-img-top" alt="Imagen formation">
+  <img src="./img/l4.jpg" class="card-img-top" alt="Imagen formation">
   <div class="card-body">
     <h3 class="card-title">PHP</h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -83,7 +83,7 @@
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="./img/libros1-612x612.jpg" class="card-img-top" alt="Image formation">
+  <img src="./img/l5.jpg" class="card-img-top" alt="Image formation">
   <div class="card-body">
     <h3 class="card-title">Symfony</h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -100,7 +100,7 @@
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="./img/libros1-612x612.jpg" class="card-img-top" alt="Image formation">
+  <img src="./img/l6.jpg" class="card-img-top" alt="Image formation">
   <div class="card-body">
     <h3 class="card-title">Base de données</h3>
  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.></p>
