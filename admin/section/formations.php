@@ -10,13 +10,11 @@ include("../config/bd.php");
 
 switch($action){
 
-        case "Ajouter":
-          
+        case "Ajouter":          
           $sentenceSQL= $connexion->prepare("INSERT INTO formations (nom,image ) VALUES (:nom,:image);");
           $sentenceSQL->bindParam(':nom',$txtNom);
           $sentenceSQL->bindParam(':image',$txtImage);          
           $sentenceSQL->execute();
-          echo "Appuyé sur le bouton Ajouter";
           break;
         case "Modifier":
           echo "Appuyé sur le bouton Modifier";  
@@ -27,16 +25,26 @@ switch($action){
 
 }
 
+$sentenceSQL= $connexion->prepare("SELECT * FROM formations");
+$sentenceSQL->execute();
+$listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
+
+
 ?>
+
+
 <div class="col-md-5">
+
   <div class="card">
     <div class="card-header">      
       Données de la formation
     </div>
+
     <div class="card-body">
       <form method="POST" enctype="multipart/form-data">
 
         <div class = "form-group">
+
         <label for="txtID">ID:</label>
         <input type="text" class="form-control" name="txtID" id="txtID" placeholder="ID">
         </div>
@@ -51,6 +59,7 @@ switch($action){
         <input type="file" class="form-control" name="txtImage" id="txtImage" placeholder="Formation">
         </div>
 
+
         <div class="btn-group" role="group" aria-label="">
           <button type="submit" name="action" value="Ajouter" class="btn btn-success">Ajouter</button>
           <button type="submit" name="action" value="Modifier" class="btn btn-warning">Modifier</button>
@@ -58,10 +67,21 @@ switch($action){
         </div>
 
       </form>
+
     </div>
+
   </div>
+
+
+
+
+
+
+
+
 </div>
 <div class="col-md-7">
+
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -72,12 +92,14 @@ switch($action){
       </tr>
     </thead>
     <tbody>
+    <?php foreach ($listeFormations as $formation) { ?>    
       <tr>
-        <td>2</td>
-        <td>apprendre PHP</td>
-        <td>image.jpg</td>
+        <td><?php echo $formation['id']; ?></td>
+        <td><?php echo $formation['nom']; ?></td>
+        <td><?php echo $formation['image']; ?></td>
         <td>selectionner | effacer</td>
       </tr>
+      <?php } ?>
     </tbody>
   </table>
 </div>
