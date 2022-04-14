@@ -9,30 +9,53 @@ $action=(isset($_POST['action']))?$_POST['action']:"";
 include("../config/bd.php");
 
 switch($action){
-
-        case "Ajouter":          
+        case "Ajouter":        
           $sentenceSQL= $connexion->prepare("INSERT INTO formations (nom,image ) VALUES (:nom,:image);");
           $sentenceSQL->bindParam(':nom',$txtNom);
           $sentenceSQL->bindParam(':image',$txtImage);          
           $sentenceSQL->execute();
+          //echo "Appuyé sur le bouton Ajouter";  
           break;
+
         case "Modifier":
-          echo "Appuyé sur le bouton Modifier";  
+          $sentenceSQL= $connexion->prepare("UPDATE formations SET nom=:nom WHERE id=:id");
+          $sentenceSQL->bindParam(':nom',$txtNom);          
+          $sentenceSQL->bindParam(':id',$txtID);
+          $sentenceSQL->execute();
+          //echo "Appuyé sur le bouton Modifier";  
           break;
+
         case "Annuler":
           echo "Appuyé sur le bouton Annuler";
           break;          
 
+        case "selectionner":
+          $sentenceSQL= $connexion->prepare("SELECT * FROM formations WHERE id=:id");
+          $sentenceSQL->bindParam(':id',$txtID);
+          $sentenceSQL->execute();
+          $formation=$sentenceSQL->fetch(PDO::FETCH_LAZY);
+          $txtNom=$formation['nom'];
+          $txtImage=$formation['image'];
+          //echo "Appuyé sur le bouton selectionner";
+          break;  
+
+          $txtNom=$formation['nom'];
+          $txtImage=$formation['image'];
+
+
+        case "Effacer":
+          $sentenceSQL= $connexion->prepare("DELETE FROM formations WHERE id=:id");
+          $sentenceSQL->bindParam(':id',$txtID);
+          $sentenceSQL->execute();
+          //echo "Appuyé sur le bouton Effacer";
+          break;  
 }
 
 $sentenceSQL= $connexion->prepare("SELECT * FROM formations");
 $sentenceSQL->execute();
 $listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
 
-
 ?>
-
-
 <div class="col-md-5">
 
   <div class="card">
@@ -41,22 +64,23 @@ $listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="card-body">
+
       <form method="POST" enctype="multipart/form-data">
 
         <div class = "form-group">
-
         <label for="txtID">ID:</label>
-        <input type="text" class="form-control" name="txtID" id="txtID" placeholder="ID">
+        <input type="text" class="form-control" value="<?php echo $txtID; ?>" name="txtID" id="txtID" placeholder="ID">
         </div>
 
         <div class = "form-group">
         <label for="txtNom">Nom:</label>
-        <input type="text" class="form-control" name="txtNom" id="txtNom" placeholder="Formation">
+        <input type="text" class="form-control" value="<?php echo $txtNom; ?>" name="txtNom" id="txtNom" placeholder="Nom Formation">
         </div>
 
         <div class = "form-group">
         <label for="txtImage">Image:</label>
-        <input type="file" class="form-control" name="txtImage" id="txtImage" placeholder="Formation">
+        <?php echo $txtImage; ?>
+        <input type="file" class="form-control" name="txtImage" id="txtImage" placeholder="Nom Image">
         </div>
 
 
@@ -97,7 +121,14 @@ $listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
         <td><?php echo $formation['id']; ?></td>
         <td><?php echo $formation['nom']; ?></td>
         <td><?php echo $formation['image']; ?></td>
-        <td>selectionner | effacer</td>
+        <td>
+        <form method="post">
+
+          <input type="hidden" name="txtID" id="txtID" value="<?php echo $formation['id']; ?>"/>
+          <input type="submit" name="action" value="selectionner" class="btn btn-primary"/>
+          <input type="submit" name="action" value="Effacer" class="btn btn-danger"/>
+        </form>
+        </td>
       </tr>
       <?php } ?>
     </tbody>
