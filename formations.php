@@ -15,7 +15,7 @@ $listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
 <img class="card-img-top" src="./img/<?php echo $formation['image']; ?>" alt="">
 <div class="card-body">
     <h2 class="card-title"><?php echo $formation['nom']; ?></h2>
-    <a name="" id="" class="btn btn-primary" href="https://goalkicker.com/" role="button"> voir plus </a>
+    <a name="" id="" class="btn btn-primary" href="ToutFormations.php" role="button"> Toutes les formations </a>
 </div>
 </div>
 </div>
