@@ -8,7 +8,7 @@
       name="description"
       content="EcoIT la référence française pour les développeurs soucieux de leur impact digital."
     />
-    <title>ECOIT Plataforme d'education Eco Web</title>
+    <title><h1>Plataforme d'education Eco Web</h1></title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,12 +17,12 @@
       rel="stylesheet"
     />
   </head>  
-  <title>Document</title>
-  </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <ul class="nav navbar-nav">
-
+             <li class="nav-item">
+                <a class="nav-link" href="#">ECFECOIT</a>
+            </li>          
             <li class="nav-item">
                 <a class="nav-link" href="index.php">Accueil</a>
             </li>
@@ -30,8 +30,11 @@
                 <a class="nav-link" href="formations.php">Formations</a>
             </li>      
             <li class="nav-item">
-                <a class="nav-link" href="nous.php">Nous</a>
+                <a class="nav-link" href="nous.php">Nous</a>                
             </li>     
+            <li class="nav-item">
+                <a class="nav-link" href="./admin/">Login</a>
+            </li>            
         </ul>
     </nav>
     <div class="container">
