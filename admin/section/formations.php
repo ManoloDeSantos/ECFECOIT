@@ -124,7 +124,7 @@ $listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
   </div>
 </div>
 <div class="col-md-7">
-  <table class="table table-bordered">
+  <table class="table table-bordered" id="table">
     <thead>
       <tr>
         <th>ID</th>
@@ -153,4 +153,15 @@ $listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
     </tbody>
   </table>
 </div>
+
+<script>
+    var table = document.querySelector("#table");
+
+    var dataTable = new DataTable(table, {
+      perPage: 3,
+      perPageSelect: [3, 6, 9, 12],
+    });
+</script>
+
+
 <?php include("../template/footer.php");?>  
