@@ -1,3 +1,17 @@
+<?php 
+session_start();
+  if(!isset($_SESSION['utilisateur'])){
+    header("Location:../index.php");
+  }else{
+
+      if($_SESSION['utilisateur']=="ok"){
+        $nomUtilisateur=$_SESSION["nomUtilisateur"];
+
+      }
+
+  }
+
+?>
 <!doctype html>
 <html lang="fr">
   <head>
