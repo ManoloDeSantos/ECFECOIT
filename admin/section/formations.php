@@ -159,7 +159,7 @@ $listeFormations=$sentenceSQL->fetchAll(PDO::FETCH_ASSOC);
 
     var dataTable = new DataTable(table, {
       perPage: 3,
-      perPageSelect: [3, 6, 9, 12],
+      perPageSelect: [3, 10, 15, 20],
     });
 </script>
 
