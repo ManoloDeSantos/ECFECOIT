@@ -28,7 +28,7 @@
                 </div>
 				<div class="jumbotron">
                     
-					<h3 class="display-3">Contáctanos</h3>
+					<h3 class="display-3">Contactez-nous</h3>
                     <p class="lead">Contactez-nous: <a href="#">Facebook</a> | <a href="#">Twitter</a> </p>
                     
                     
