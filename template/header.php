@@ -8,7 +8,7 @@
       name="description"
       content="EcoIT la référence française pour les développeurs soucieux de leur impact digital."
     />
-    <title><h1>Plataforme d'education Eco Web</h1></title>
+    <title>Plataforme d'education Eco Web</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
