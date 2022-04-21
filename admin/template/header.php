@@ -22,7 +22,12 @@ session_start();
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
     <Script language = "JavaScript" src ="../../table.js"> </script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand&family=Trirong:ital@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
 <body>
   <?php $url="http://".$_SERVER['HTTP_HOST']."/ECFECOIT"?>
