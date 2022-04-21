@@ -33,3 +33,10 @@ Pour les accés à la base de données, soit vous utilisez la base de données d
 
 déploiement :
 J’ai hébergé la pagine web sur 000webhost.com, serveur avec PHP et MySQL
+
+Link https://emecoit.000webhostapp.com/
+
+Login (Entrer dans l’administrateur)
+
+Utilisateur : user1
+Mot de passe : system
