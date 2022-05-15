@@ -23,8 +23,9 @@ Listez et vérifiez que vous êtes bien placés sur la branche main
 
 Pour les accés à la base de données, soit vous utilisez la base de données distante qui contient déjà des données, soit vous pouvez utiliser une bdd en local.
 
-Déploiement :
-J’ai hébergé la pagine web sur 000webhost.com, serveur avec PHP et MySQL
+Déploiement (serveur avec PHP et MySQL):
+
+J’ai hébergé la pagine web sur:
 
 Link https://ecoit.000webhostapp.com/
 

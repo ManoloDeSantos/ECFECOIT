@@ -1,0 +1,138 @@
+:root {
+  --logotipe: #1a1a1a;
+  --profesion: #f2f2f2;
+  --primario: #2e5fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+  background-image: url("./../img/bg.jpg");
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  max-width: 800px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logotipe {
+  padding: 10px;
+  border: 5px solid var(--logotipe);
+  color: var(--logotipe);
+}
+
+.logotipe .sous-titre {
+  text-align: center;
+  color: var(--profesion);
+  background: var(--logotipe);
+  padding: 12px 20px;
+  transition: 0.5s ease all;
+  font-size: 20px;
+  font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logotipe:hover .sous-titre {
+  background: var(--primario);
+}
+
+.texte-anime {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.texte-anime > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.3s ease all;
+}
+
+.texte-anime > div.animation {
+  transform: translateY(-50px);
+}
+
+.texte-anime > div span {
+  font-size: 50px;
+  font-weight: normal;
+  line-height: 50px;
+}
+
+.texte-anime .deuxieme-ligne {
+  position: absolute;
+  top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .texte-anime > div span {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .texte-anime .deuxieme-ligne {
+    top: 100px;
+  }
+
+  .texte-anime > div.animation {
+    transform: translateY(-100px);
+  }
+
+  .logotipe .sous-titre {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .texte-anime > div span {
+    font-size: 150px;
+    line-height: 150px;
+  }
+
+  .texte-anime .deuxieme-ligne {
+    top: 150px;
+  }
+
+  .texte-anime > div.animation {
+    transform: translateY(-150px);
+  }
+
+  .logotipe .sous-titre {
+    font-size: 42px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .texte-anime > div span {
+    font-size: 180px;
+    line-height: 160px;
+  }
+
+  .texte-anime .deuxieme-ligne {
+    top: 150px;
+  }
+
+  .texte-anime > div.animation {
+    transform: translateY(-150px);
+  }
+
+  .logotipe .sous-titre {
+    font-size: 48px;
+  }
+}

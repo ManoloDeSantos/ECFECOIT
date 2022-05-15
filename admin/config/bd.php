@@ -1,6 +1,6 @@
 <?php
 $host="localhost";
-$bd="ecfecoit";
+$bd="ecoit";
 $user="root";
 $password="";
 
