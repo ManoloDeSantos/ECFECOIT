@@ -29,7 +29,7 @@ session_start();
     />
   </head>
 <body>
-  <?php $url="http://".$_SERVER['HTTP_HOST']."/ECFECOIT"?>
+  <?php $url="http://".$_SERVER['HTTP_HOST']."/ECOIT"?>
 
     <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="nav navbar-nav">
@@ -43,3 +43,5 @@ session_start();
     <div class="container">
       <br/>
         <div class="row">
+
+
