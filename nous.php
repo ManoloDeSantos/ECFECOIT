@@ -21,7 +21,7 @@
             <br/>
                 <div class="jumbotron">
                     
-					<h2 class="display-3">ECFECOIT</h2>
+					<h2 class="display-3">ECOIT</h2>
                     <p class="lead">Bienvenue sur votre site de formation numérique écologique.</p>
                     
                     

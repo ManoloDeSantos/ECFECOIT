@@ -27,7 +27,9 @@ Déploiement (serveur avec PHP et MySQL):
 
 J’ai hébergé la pagine web sur:
 
-Link https://ecoit.000webhostapp.com/
+Heroku: https://desantos-ecoit.herokuapp.com/
+
+https://ecfecoit.000webhostapp.com/
 
 Login (Entrer dans l’administrateur)
 
