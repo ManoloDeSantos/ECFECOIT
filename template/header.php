@@ -22,11 +22,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="ecoit.php">ECOIT</a>
-            </li>                    
-            <li class="nav-item">
                 <a class="nav-link" href="index.php">Accueil</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ecoit.php">ECOIT</a>
+            </li>                    
             <li class="nav-item">
                 <a class="nav-link" href="formations.php">Formations</a>
             </li>      

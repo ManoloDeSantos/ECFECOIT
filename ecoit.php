@@ -1,4 +1,4 @@
-<?php include("template/header.php"); ?>
+<?php include("./template/header.php"); ?>
 
       <div class="jumbotron text-center">
         <h1 class="display-3">Bienvenue sur le site écologique de formation ECOIT</h1>
